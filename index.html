@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Bandits</title>
+    <link rel="icon" href="assests/img-logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="var.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Creepster&family=Pirata+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="content">
+        <!-- Nav Bar-->
+        <nav style="font-family: Bungee Inline, sans-serif;">
+            <img src="assests/logo.png" alt="Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="#home" class="n1">Home</a></li>
+                <li><a href="#about" class="n1">About</a></li>
+                <li><a href="#community" class="n1"><span class="material-symbols-outlined">
+                            arrow_drop_down
+                        </span>Community</a></li>
+                <li><a href="#faq" class="n1"><span class="material-symbols-outlined">
+                            arrow_drop_down
+                        </span>FAQ</a></li>
+                <li class="li1" style=" background-repeat: no-repeat; background-size: contain;"><a
+                        href="#download"><span style="color: dodgerblue;" class="material-symbols-outlined">
+                            download
+                        </span><span style="color: dodgerblue; padding-right: 8px;">Download</span></a></li>
+                <li class="li2" style=" background-repeat: no-repeat; background-size: contain;"><a id="popupBtn"
+                        style="cursor: pointer;"><span style="color: var(--dodgerred);"
+                            class="material-symbols-outlined">
+                            person
+                        </span><span style="color: var(--dodgerred);">Login</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Popup -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <div class="tab">
+                    <button class="tablinks" id="defaultTab" onclick="openTab(event, 'Login')">Login</button>
+                    <button class="tablinks" onclick="openTab(event, 'Signup')">Signup</button>
+                </div>
+
+                <!-- Login Form -->
+                <div id="Login" class="tabcontent">
+                    <h2>Login</h2>
+                    <form>
+                        <label for="loginUsername">Username:</label>
+                        <input type="text" id="loginUsername" name="username" required>
+                        <label for="loginPassword">Password:</label>
+                        <input type="password" id="loginPassword" name="password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+
+                <!-- Signup Form -->
+                <div id="Signup" class="tabcontent">
+                    <h2>Signup</h2>
+                    <form>
+                        <label for="signupUsername">Username:</label>
+                        <input type="text" id="signupUsername" name="username" required>
+                        <label for="signupEmail">Email:</label>
+                        <input type="email" id="signupEmail" name="email" required>
+                        <label for="signupPassword">Password:</label>
+                        <input type="password" id="signupPassword" name="password" required>
+                        <button type="submit">Signup</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--side nav-->
+
+        <div class="sidenav">
+            <a href="#section1"><span class="material-symbols-outlined">
+                    grid_view
+                </span></a>
+            <a href="#section2"><span class="material-symbols-outlined">
+                    mail
+                </span></a>
+        </div>
+
+        <!-- Latest post and updates grid-->
+        <div class="pu-container">
+            <div class="post-main">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 style="font-family: Pirata One, system-ui; word-spacing: 10px; letter-spacing: 2px;">AHOY,
+                            SEA BANDITS!</h3>
+                        <p class="sub-header">Community | 23 June 2024</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Ahoy, Sea Bandits!</p>
+                        <p>
+                            Welcome aboard to the grand launch of Sea Bandits!
+                            We be pleased to announce our website be ready for sailin'. <br>
+                            Feel free to explore the forum and chart yer course.
+                        </p>
+                        <p>
+                            Our forums be havin' a bounty of excitin' features such as:
+                        </p>
+                        <ul>
+                            <li>Treasure hunts</li>
+                            <li>Crew gatherings</li>
+                            <li>Sea shanty sing-alongs</li>
+                        </ul>
+                        <p>
+                            Prepare to embark on adventures untold and join our merry crew.
+                            Hoist the anchor and let's set sail!
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" style="text-decoration: none;"><span class="material-symbols-outlined"
+                                style="font-size: 18px; font-weight: bold;">
+                                favorite
+                            </span>Like</a>
+                        <a href="#" style="text-decoration: none;"><span class="material-symbols-outlined"
+                                style="font-size: 18px; font-weight: bold;">
+                                comment
+                            </span>Comment</a>
+                        <a href="#" style="text-decoration: none;"><span class="material-symbols-outlined"
+                                style="font-size: 18px; font-weight: bold;">
+                                upload
+                            </span>Share</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="update">
+                <div class="latest-posts">
+                    <div class="latest-posts-header">
+                        <h4 style="font-family: Pirata One, system-ui; word-spacing: 10px; letter-spacing: 2px;">LATEST
+                            POSTS</h4>
+                    </div>
+
+                    <div class="post">
+                        <h5>AHOY, SEA BANDITS!</h5>
+                        <p><span class="author">Admin</span> - 5 minutes ago <span class="arrow">→</span></p>
+                        <p>
+                            Ahoy, Sea Bandits! Welcome aboard to the grand launch of Sea Bandits!
+                            We be pleased to announce our website be ready for sailin'. Feel free to explore the forum
+                            and ..
+                            <a href="#">Read more...</a>
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="post">
+                        <h5>Test</h5>
+                        <p><span class="author">Admin</span> - 5 minutes ago</p>
+                        <p>
+                            This is a forum entry test ..
+                            <a href="#">Read more...</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

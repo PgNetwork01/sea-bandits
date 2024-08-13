@@ -1,0 +1,125 @@
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Popup content */
+.popup-content {
+    /* background-color: #fff; */
+    margin: 10% auto;
+    padding: 20px;
+    /* border: 1px solid #888; */
+    width: 350px;
+    /* border-radius: 8px; */
+    text-align: left;
+    /* color: #fffc95; */
+    background: url(assests/updates.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 29%;
+    padding: 493px 109px;
+    /* margin: 28px; */
+    background-position-x: center;
+    padding-top: 71px;
+    transition: 1s;
+    margin-top: 38px;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 42px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -7px;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--dodgerred);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Tab styles */
+.tab {
+    display: flex;
+    justify-content: space-around;
+    /* border-bottom: 1px solid #ddd; */
+    margin-bottom: 42px;
+    margin-top: 45px;
+}
+
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: url(assests/wood.png);
+    color: white;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    padding: 14px 31px;
+    overflow: hidden;
+    background-size: contain;
+    background-color: transparent;
+    transition: 0.5s;
+    font-size: 18px;
+}
+
+.tab button.active {
+    /* background-color: #ccc; */
+    color: #58ffd8;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tabcontent.active {
+    display: block;
+    transition: 1s;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 9px;
+    color: white;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}

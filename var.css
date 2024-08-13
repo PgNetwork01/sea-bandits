@@ -1,0 +1,37 @@
+:root {
+    --glassbg: #16243fa8;
+    --dodgerred: rgb(255, 43, 43);
+}
+
+@font-face {
+    font-family: font1;
+    src: url(/fonts/IBMPlexMono-Light.ttf);
+  }
+@font-face {
+    font-family: font2;
+    src: url(/fonts/LinLibertine_Mah.ttf);
+  }
+@font-face {
+    font-family: font3;
+    src: url(fonts/LinLibertine_RBah.ttf);
+  }
+@font-face {
+    font-family: font4;
+    src: url(fonts/LinLibertine_RZIah.ttf);
+  }
+@font-face {
+    font-family: font5;
+    src: url(fonts/Montserrat-Light.ttf);
+  }
+@font-face {
+    font-family: font6;
+    src: url(fonts/Montserrat-Medium.ttf);
+  }
+@font-face {
+    font-family: font7;
+    src: url(fonts/FuturaRenner-Light.otf);
+  }
+@font-face {
+    font-family: font8;
+    src: url(fonts/FuturaRenner-Regular.otf);
+  }

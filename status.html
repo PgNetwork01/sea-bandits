@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Server Status</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .container {
+            width: auto;
+            margin: 20px auto;
+        }
+
+        /* Set a fixed height to prevent stretching */
+        canvas {
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            height: 500px; /* Fixed height */
+            padding: 10px;
+        }
+
+        h3 {
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container for Players Online Chart -->
+    <div class="container">
+        <h3>Players Online</h3>
+        <canvas id="playersOnlineChart"></canvas>
+    </div>
+
+    <!-- Container for Server Load Chart -->
+    <div class="container">
+        <h3>Server Load</h3>
+        <canvas id="serverLoadChart"></canvas>
+    </div>
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        // Players Online Chart
+        const playersCtx = document.getElementById('playersOnlineChart').getContext('2d');
+        const playersOnlineChart = new Chart(playersCtx, {
+            type: 'line',
+            data: {
+                labels: ['00:00', '00:05', '00:10', '00:15', '00:20', '00:25', '00:30'],
+                datasets: [
+                    {
+                        label: 'Players Online',
+                        data: [50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000], // Adjusted data points
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 2,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: false,  // Disable responsiveness to avoid stretching
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Time',
+                            color: '#fff'
+                        },
+                        ticks: {
+                            color: '#fff'
+                        },
+                        grid: {
+                            color: '#444'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Players Online',
+                            color: '#fff'
+                        },
+                        ticks: {
+                            stepSize: 50,  // Adjust step size for better scaling
+                            color: '#fff'
+                        },
+                        grid: {
+                            color: '#444'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#fff'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Server Load Chart
+        const serverCtx = document.getElementById('serverLoadChart').getContext('2d');
+        const serverLoadChart = new Chart(serverCtx, {
+            type: 'line',
+            data: {
+                labels: ['00:00', '00:05', '00:10', '00:15', '00:20', '00:25', '00:30'],
+                datasets: [
+                    {
+                        label: 'Server Load',
+                        data: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100], // Adjusted data points
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 2,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: false,  // Disable responsiveness to avoid stretching
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Time',
+                            color: '#fff'
+                        },
+                        ticks: {
+                            color: '#fff'
+                        },
+                        grid: {
+                            color: '#444'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Server Load (%)',
+                            color: '#fff'
+                        },
+                        ticks: {
+                            callback: function(value) { return value + '%'; },  // Append '%' to values
+                            stepSize: 10,  // Step size for percentage
+                            color: '#fff'
+                        },
+                        grid: {
+                            color: '#444'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#fff'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

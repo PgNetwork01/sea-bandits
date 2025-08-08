@@ -1,6 +1,8 @@
 :root {
     --glassbg: #16243fa8;
     --dodgerred: rgb(255, 43, 43);
+    --dodgergreen: rgb(23, 255, 23);
+    --dodgerorg: #ff7e14;
 }
 
 @font-face {

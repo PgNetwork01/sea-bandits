@@ -8,17 +8,17 @@ const popupBtn = document.getElementById('popupBtn');
 const closeBtn = document.querySelector('.close');
 
 // Open the popup when the user clicks the button
-popupBtn.onclick = function() {
+popupBtn.onclick = function () {
     popup.style.display = 'block';
 }
 
 // Close the popup when the user clicks on <span> (x)
-closeBtn.onclick = function() {
+closeBtn.onclick = function () {
     popup.style.display = 'none';
 }
 
 // Close the popup when the user clicks outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == popup) {
         popup.style.display = 'none';
     }
@@ -41,3 +41,35 @@ function openTab(evt, tabName) {
 
 // Set the default tab to open
 document.getElementById('defaultTab').click();
+
+function signout() {
+    window.location.href = 'logout.php';
+}
+
+function togglePopup() {
+    const popup = document.getElementById('userPopup');
+    popup.style.display = (popup.style.display === 'flex') ? 'none' : 'flex';
+}
+
+
+
+let answers = document.querySelectorAll(".accordion");
+answers.forEach((event) => {
+    event.addEventListener("click", () => {
+        if (event.classList.contains("active")) {
+            event.classList.remove("active");
+        } else {
+            event.classList.add("active");
+        }
+    });
+});
+
+function openNav() {
+    document.getElementById("mySidenav1").style.width = "250px";
+    document.querySelector(".main-content").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav1").style.width = "0";
+    document.querySelector(".main-content").style.marginLeft = "0";
+}
